@@ -43,6 +43,8 @@ You may need to enter the values little by little like: 5000000, 10000000, 15000
 
 | File    | Limit    |
 |---------|----------|
-| If Else | 1636     |
 | If      | 15000000 |
-| Switch  | 15000000 |
+| Switch  | 10000000 |
+| If Else | 1636     |
+
+_the limits are still being tested_
