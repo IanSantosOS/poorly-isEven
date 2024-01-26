@@ -1,0 +1,14 @@
+{
+  "name": "poorly-iseven",
+  "version": "1.0.0",
+  "description": "A code that creates a file called isEven with many if statements in the \"files\" directory.",
+  "main": "index.js",
+  "scripts": {
+    "if": "node src/if.js",
+    "ifelse": "node src/ifelse.js",
+    "switch": "node src/switch.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -3,8 +3,8 @@ const readline = require('readline');
 const fs = require('fs');
 
 let maxNum = (() => {
-  if (fs.existsSync('isEven.js')) {
-    const file = fs.readFileSync('isEven.js', 'utf-8').split('if (number === ');
+  if (fs.existsSync('./files/isEvenIfElse.js')) {
+    const file = fs.readFileSync('./files/isEvenIfElse.js', 'utf-8').split('if (number === ');
     const number = file.at(-1).split(')')[0];
     return Number(number);
   }
@@ -28,18 +28,18 @@ const generateFile = (number) => {
     code += '\n}';
   }
 
-  if (fs.existsSync('isEven.js')) {
-    const file = fs.readFileSync('isEven.js', 'utf-8').split('\n');
+  if (fs.existsSync('./files/isEvenIfElse.js')) {
+    const file = fs.readFileSync('./files/isEvenIfElse.js', 'utf-8').split('\n');
     file[0] = `const number = ${number}`;
-    fs.writeFileSync('isEven.js', file.join('\n') + code);
+    fs.writeFileSync('./files/isEvenIfElse.js', file.join('\n') + code);
   }
   else {
-    fs.writeFileSync('isEven.js', `const number = ${number}`);
-    fs.appendFileSync('isEven.js', code);
+    fs.writeFileSync('./files/isEvenIfElse.js', `const number = ${number}`);
+    fs.appendFileSync('./files/isEvenIfElse.js', code);
   }
 };
 
-const execIsEven = () => exec('node ./isEven.js', (error, stdout, stderror) => {
+const execIsEven = () => exec('node ./files/isEvenIfElse.js', (error, stdout, stderror) => {
   if (error) {
     console.error('Error:', error);
     return;

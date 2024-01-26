@@ -1,6 +1,6 @@
 # Poorly isEven File
 
-A Code that creates a file called isEven.js with lots of if & else
+A code that creates a file called isEven with many if statements in the "files" directory.
 
 ## Why?
 
@@ -17,11 +17,32 @@ My program isn't even close to being as optimized, it's the first time I've trie
 
 and to be quite honest, this was actually fun to make :)
 
+## Commands
+
+Create a file with only if()
+
+    npm run if
+
+Create a file with only if() and else()
+
+    npm run ifelse
+
+Create a file with only switch()
+
+    npm run switch
+
 ## Examples
 
-![Demonstration image](./demo.png)
+![Demonstration image](./imgs/demo.png)
 
-![Files image](./files.png)
+![Files image](./imgs/files.png)
 
 
-Ah, for anyone reading this the limit, at least on my computer, is 1636.
+# Limits
+You may need to enter the values little by little like: 5000000, 10000000, 15000000
+
+| File    | Limit    |
+|---------|----------|
+| If Else | 1636     |
+| If      | 15000000 |
+| Switch  | 15000000 |
