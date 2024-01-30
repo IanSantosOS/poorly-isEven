@@ -13,6 +13,8 @@ let maxNum = (() => {
   }
 })();
 
+//* Functions 
+
 const generateFile = (number) => {
   let code = "";
 
@@ -48,6 +50,16 @@ const execIsEven = () => exec('node ./files/isEvenSwitch.js', (error, stdout, st
   }
   console.log(stdout);
 });
+
+//* Directory Verification 
+
+fs.access('./files/', fs.constants.F_OK, (err) => {
+  if (!err) return;
+  if (err.code !== 'ENOENT') return;
+  exec('mkdir files');
+});
+
+//* Prompt 
 
 const rl = readline.createInterface({
   input: process.stdin,
